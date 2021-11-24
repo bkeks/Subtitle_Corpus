@@ -31,14 +31,3 @@ create table subtitle_join (
   FOREIGN KEY (id_meta) REFERENCES subtitle_meta(id_meta),
   FOREIGN KEY (id_token) REFERENCES subtitle_token(id_token)
 ) engine=InnoDB default charset=utf8;
-
-
-#######
-alles löschen
-DELETE FROM subtitle_join;
-DELETE FROM subtitle_token;
-DELETE FROM subtitle_meta;
-
-ALTER TABLE subtitle_meta AUTO_INCREMENT = 0;
-ALTER TABLE subtitle_join AUTO_INCREMENT = 0;
-ALTER TABLE subtitle_token AUTO_INCREMENT = 0;
